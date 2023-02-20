@@ -60,11 +60,20 @@ function Navbar() {
     return (
         <>
         <nav id="nav">
-            <div class="right">
-                <div class="logo">
+            <div className="right">
+            <div className="footer-icons">
+                    <a href="https://twitter.com/AsadUll89061835" target="_blank"> <i className="ri-twitter-fill icn"></i></a>
+                    <a href="https://www.linkedin.com/in/asad-ullah-ab569718b/" target="_blank"><i className="ri-linkedin-box-fill icn"></i></a>
+                    <a href="https://github.com/AsadUllah2554" target="_blank"><i className="ri-github-fill icn"></i></a>
+                    <a href="https://github.com/AsadUllah2554" target="_blank"><i className="ri-facebook-circle-fill icn"></i></a>
+                    <a href="https://github.com/AsadUllah2554" target="_blank"><i className="ri-instagram-line icn"></i></a>
+                </div>  
+                {/* <div class="logo">
                     <h2><Link to="/" className='links'><span className="yellow ">Asad</span></Link></h2>
-                </div>
-                <ul class={ menuClass ? "open navbar":"navbar"} id="navv"  ref={menuRef} >
+                </div> */}
+
+                <div className="nav-list">
+                <ul className={ menuClass ? "open navbar":"navbar"} id="navv"  ref={menuRef} >
                     
                     <li onClick={()=>handleClickScroll('home')} className='links'> home </li>
                     <li onClick={()=>handleClickScroll('projects')} className='links'> projects </li>
@@ -72,13 +81,9 @@ function Navbar() {
                 </ul>
                 <i className="ri-menu-line"  id="menu-icon"  onClick={showNavBar} ></i>
                 {/* { menuClass ? "ri-menu-line":"ri-menu-line open"} */}
+                </div>
               
-                <div className="footer-icons">
-                    <a href="https://twitter.com/AsadUll89061835" target="_blank"> <i class="ri-twitter-fill icn"></i></a>
-                    <a href="https://www.linkedin.com/in/asad-ullah-ab569718b/" target="_blank"><i class="ri-linkedin-box-fill icn"></i></a>
-                    <a href="https://github.com/AsadUllah2554" target="_blank"><i class="ri-github-fill icn"></i></a>
                  
-                </div>    
             </div>
         </nav>
 
