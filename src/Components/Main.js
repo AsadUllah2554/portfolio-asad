@@ -41,7 +41,6 @@ function MainBody() {
         <h1 className="section--heading" >Contact Us</h1>
         <ContactForm />
         </div>   
-
         </>
 
     )

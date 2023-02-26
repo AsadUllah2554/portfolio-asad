@@ -2,11 +2,11 @@ import React,{ useState,useRef,useEffect } from "react";
 import { Link } from 'react-router-dom'
 import Projects from "./Projects";
 import ContactForm from "./ContactMe";
-
-
 import "./components.css"
+// import SignupForm from "./FormikForm";
 
-function Navbar() {
+
+    function Navbar() {
     const [menuClass,setMenuClass] = useState(false);
     const menuRef = useRef();
   
@@ -82,8 +82,6 @@ function Navbar() {
                 <i className="ri-menu-line"  id="menu-icon"  onClick={showNavBar} ></i>
                 {/* { menuClass ? "ri-menu-line":"ri-menu-line open"} */}
                 </div>
-              
-                 
             </div>
         </nav>
 
