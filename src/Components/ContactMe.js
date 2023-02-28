@@ -118,19 +118,17 @@ function ContactForm(){
                   
                 break }}
   
-        }
-    
-    , [formData.firstName.length, formData.email.length,formData.message.length]);
+        }, [formData.firstName.length, formData.email.length,formData.message.length]);
   
     const sendEmail = (e) => {
-      setAlert(successAlert)
+ 
         e.preventDefault();
         if(formData.firstName.length && formData.email.length && formData.message.length !=0){
         setIsLoaading(true)
     
         emailjs.sendForm('service_grj07xy', 'template_qsbukju', form.current, 'UiGv08LxO6Iy57UmO')
           .then((result) => {
-            // loadingEffect()
+            if(formData.firstName.length && formData.email.length && formData.message.length !==0){
             setIsLoaading(false)
             if(randomNumber % 2 == 0){
               setAlert(successAlert)
@@ -138,7 +136,9 @@ function ContactForm(){
             else{
               setAlert(failAlert)
             }
+       }
             
+   
         
           }, (error) => {
               console.log(error.text);
@@ -232,7 +232,8 @@ function ContactForm(){
                   
                 break }
             
-                    }
+                }
+              
             
             }
 
@@ -291,8 +292,7 @@ function ContactForm(){
      <br />
      <br />
       {alert}
-
-       
+  
    </form>   
     </div>
     </div>

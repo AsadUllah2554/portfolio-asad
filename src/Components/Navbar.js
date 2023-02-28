@@ -112,10 +112,13 @@ import "./components.css"
 
         <div id="projects">
         <h1 className="section--heading" >Projects</h1>
+        <br /><br />
         <Projects/>
         </div>  
          <div id="contact">
+         <br /><br />
         <h1 className="section--heading" >Contact Us</h1>
+        
         <ContactForm />
         <i class="ri-arrow-up-line arrow icn" onClick={()=>handleClickScroll('nav')}></i>
         </div>  
